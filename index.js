@@ -16,6 +16,9 @@ const typeDefs = gql`
         totalDays:Int!
         allDays:[SkiDay!]!
     }
+    type Mutation{
+        removeDay(id:ID):SkiDay!
+    }
 `;
 const server = new ApolloServer({
     typeDefs,
